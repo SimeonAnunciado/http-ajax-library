@@ -1,7 +1,7 @@
 const http = new easyHTTP;
 
 
-// const post=  http.get('js/custom.json/', function(error,response){
+// const post=  http.get('https://jsonplaceholder.typicode.com/todos', function(error,response){
 // 	if (error) {
 // 		console.log(error)
 // 	}else{
@@ -17,10 +17,29 @@ const data = {
 };
 
 // create post
-http.post('js/custom.json',data ,function(error,post){
+// http.post('https://jsonplaceholder.typicode.com/posts',data ,function(error,post){
+// 	if (error) {
+// 		console.log(error)
+// 	}else{
+// 		console.log(post);
+//  	}
+// });
+
+// edit post
+http.put('https://jsonplaceholder.typicode.com/posts/5',data, function(error,post){
 	if (error) {
 		console.log(error)
 	}else{
-		console.log('success add new post');
- 	}
+		console.log(post);
+	}
+
+})
+
+// delete post
+http.delete('https://jsonplaceholder.typicode.com/posts/5', function(error,response){
+	if (error) {
+		console.log(error)
+	}else{
+		console.log(response);
+	}
 });
