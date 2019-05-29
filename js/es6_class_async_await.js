@@ -28,7 +28,7 @@ class easyHTTP{
 		return await response.json();
 	}
 
-	async delete(url,data){
+	async delete(url){
 		const response = await fetch(url);
 		return await response.json();
 	}
